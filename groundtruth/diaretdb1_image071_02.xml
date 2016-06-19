@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool SYSTEM "http://www.it.lut.fi/project/imageret/imgannotool/downloads/imgannotool_dataformat_v_0_1.dtd">
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>301,461</coords2d></centroid><radius direction="x">97</radius></circleregion><representativepoint><coords2d>331,471</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><circleregion><centroid><coords2d>718,576</coords2d></centroid><radius direction="x">43</radius></circleregion><representativepoint><coords2d>718,569</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+</markinglist>
+</imgannotooldata>

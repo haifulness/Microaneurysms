@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool SYSTEM "http://www.it.lut.fi/project/imageret/imgannotool/downloads/imgannotool_dataformat_v_0_1.dtd">
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>363,686</coords2d></centroid><radius direction="x">110</radius></circleregion><representativepoint><coords2d>439,703</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><circleregion><centroid><coords2d>784,464</coords2d></centroid><radius direction="x">32</radius></circleregion><representativepoint><coords2d>781,464</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Soft_exudates</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>716,149</coords2d></centroid><radius direction="x">139</radius><radius direction="y">68</radius><angle>53</angle></ellipseregion><representativepoint><coords2d>754,144</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Neovascularisation</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>444,332</coords2d></centroid><radius direction="x">142</radius><radius direction="y">72</radius><angle>31</angle></ellipseregion><representativepoint><coords2d>432,310</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Neovascularisation</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>849,622</coords2d></centroid><coords2d>834,384</coords2d><coords2d>993,382</coords2d><coords2d>1097,410</coords2d><coords2d>1138,491</coords2d><coords2d>1178,562</coords2d><coords2d>1165,639</coords2d><coords2d>1135,682</coords2d><coords2d>1085,707</coords2d><coords2d>1074,766</coords2d><coords2d>1031,783</coords2d><coords2d>976,829</coords2d><coords2d>931,863</coords2d><coords2d>925,895</coords2d><coords2d>800,919</coords2d><coords2d>648,910</coords2d><coords2d>584,874</coords2d><coords2d>569,788</coords2d><coords2d>550,715</coords2d><coords2d>537,632</coords2d><coords2d>551,532</coords2d><coords2d>634,464</coords2d><coords2d>713,430</coords2d><coords2d>734,371</coords2d><coords2d>836,385</coords2d><coords2d>836,385</coords2d><coords2d>773,623</coords2d><coords2d>775,622</coords2d><coords2d>772,618</coords2d><coords2d>772,618</coords2d><coords2d>834,384</coords2d></polygonregion><representativepoint><coords2d>777,620</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Neovascularisation</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>739,972</coords2d></centroid><radius direction="x">168</radius><radius direction="y">44</radius><angle>8</angle></ellipseregion><representativepoint><coords2d>725,982</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Neovascularisation</markingtype></marking>
+</markinglist>
+</imgannotooldata>

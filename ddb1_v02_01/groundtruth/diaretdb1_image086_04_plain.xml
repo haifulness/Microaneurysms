@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool>
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>1119,601</coords2d></centroid><radius direction="x">85</radius></circleregion><representativepoint><coords2d>1095,606</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>813,708</coords2d></centroid><coords2d>796,714</coords2d><coords2d>807,722</coords2d><coords2d>818,725</coords2d><coords2d>829,725</coords2d><coords2d>838,713</coords2d><coords2d>833,696</coords2d><coords2d>820,687</coords2d><coords2d>801,689</coords2d><coords2d>790,693</coords2d><coords2d>796,714</coords2d></polygonregion><representativepoint><coords2d>824,702</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>721,775</coords2d></centroid><coords2d>736,779</coords2d><coords2d>733,761</coords2d><coords2d>715,757</coords2d><coords2d>703,767</coords2d><coords2d>703,779</coords2d><coords2d>712,787</coords2d><coords2d>728,787</coords2d><coords2d>736,779</coords2d></polygonregion><representativepoint><coords2d>723,776</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>863,985</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>863,985</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>675,975</coords2d></centroid><coords2d>670,984</coords2d><coords2d>679,985</coords2d><coords2d>688,981</coords2d><coords2d>694,971</coords2d><coords2d>680,963</coords2d><coords2d>663,963</coords2d><coords2d>657,972</coords2d><coords2d>670,984</coords2d></polygonregion><representativepoint><coords2d>681,974</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+</markinglist>
+</imgannotooldata>

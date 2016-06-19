@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool>
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>1147,502</coords2d></centroid><radius direction="x">111</radius></circleregion><representativepoint><coords2d>1108,485</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>201,420</coords2d></centroid><coords2d>220,441</coords2d><coords2d>216,455</coords2d><coords2d>198,461</coords2d><coords2d>185,454</coords2d><coords2d>182,428</coords2d><coords2d>180,416</coords2d><coords2d>170,400</coords2d><coords2d>183,378</coords2d><coords2d>206,374</coords2d><coords2d>225,385</coords2d><coords2d>223,409</coords2d><coords2d>220,441</coords2d></polygonregion><representativepoint><coords2d>199,439</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>617,545</coords2d></centroid><coords2d>621,526</coords2d><coords2d>611,521</coords2d><coords2d>600,525</coords2d><coords2d>596,538</coords2d><coords2d>592,554</coords2d><coords2d>600,564</coords2d><coords2d>613,565</coords2d><coords2d>627,568</coords2d><coords2d>636,562</coords2d><coords2d>640,553</coords2d><coords2d>633,544</coords2d><coords2d>627,533</coords2d><coords2d>621,526</coords2d></polygonregion><representativepoint><coords2d>604,537</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>578,637</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>578,637</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+</markinglist>
+</imgannotooldata>

@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool>
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>1152,468</coords2d></centroid><radius direction="x">107</radius></circleregion><representativepoint><coords2d>1114,476</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><circleregion><centroid><coords2d>520,376</coords2d></centroid><radius direction="x">91</radius></circleregion><representativepoint><coords2d>548,369</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>316,647</coords2d></centroid><radius direction="x">270</radius></circleregion><representativepoint><coords2d>494,603</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1022,820</coords2d></centroid><radius direction="x">28</radius></circleregion><representativepoint><coords2d>1014,817</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>856,451</coords2d></centroid><radius direction="x">50</radius></circleregion><representativepoint><coords2d>858,485</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>942,439</coords2d></centroid><radius direction="x">35</radius></circleregion><representativepoint><coords2d>942,446</coords2d></representativepoint><confidencelevel>Low</confidencelevel><markingtype>Soft_exudates</markingtype></marking>
+</markinglist>
+</imgannotooldata>

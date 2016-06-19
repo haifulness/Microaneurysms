@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool>
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>265,624</coords2d></centroid><radius direction="x">108</radius></circleregion><representativepoint><coords2d>321,649</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><circleregion><centroid><coords2d>591,455</coords2d></centroid><radius direction="x">71</radius></circleregion><representativepoint><coords2d>596,489</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Soft_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>489,147</coords2d></centroid><radius direction="x">64</radius></circleregion><representativepoint><coords2d>497,167</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Soft_exudates</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>882,975</coords2d></centroid><radius direction="x">148</radius><radius direction="y">71</radius><angle>153</angle></ellipseregion><representativepoint><coords2d>882,993</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Soft_exudates</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>608,869</coords2d></centroid><radius direction="x">258</radius><radius direction="y">200</radius><angle>133</angle></ellipseregion><representativepoint><coords2d>570,902</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>534,434</coords2d></centroid><radius direction="x">152</radius><radius direction="y">83</radius><angle>165</angle></ellipseregion><representativepoint><coords2d>639,461</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>679,297</coords2d></centroid><radius direction="x">61</radius><radius direction="y">39</radius><angle>132</angle></ellipseregion><representativepoint><coords2d>650,287</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>456,129</coords2d></centroid><radius direction="x">49</radius><radius direction="y">29</radius><angle>86</angle></ellipseregion><representativepoint><coords2d>456,160</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>899,786</coords2d></centroid><radius direction="x">139</radius><radius direction="y">57</radius><angle>153</angle></ellipseregion><representativepoint><coords2d>875,773</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>922,536</coords2d></centroid><radius direction="x">215</radius><radius direction="y">140</radius><angle>158</angle></ellipseregion><representativepoint><coords2d>889,610</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>883,253</coords2d></centroid><radius direction="x">70</radius><radius direction="y">25</radius><angle>147</angle></ellipseregion><representativepoint><coords2d>888,258</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>797,77</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>797,77</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>380,28</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>380,28</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>296,85</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>296,85</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>665,64</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>665,64</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>675,561</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>675,561</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>634,617</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>634,617</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>672,615</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>672,615</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>717,581</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>717,581</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+</markinglist>
+</imgannotooldata>

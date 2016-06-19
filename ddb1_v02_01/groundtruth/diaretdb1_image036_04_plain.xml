@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool>
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><polygonregion><centroid><coords2d>974,335</coords2d></centroid><coords2d>947,307</coords2d><coords2d>976,307</coords2d><coords2d>1005,318</coords2d><coords2d>1013,345</coords2d><coords2d>1015,373</coords2d><coords2d>1004,379</coords2d><coords2d>958,360</coords2d><coords2d>940,338</coords2d><coords2d>936,316</coords2d><coords2d>947,307</coords2d></polygonregion><representativepoint><coords2d>973,330</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>416,169</coords2d></centroid><coords2d>453,142</coords2d><coords2d>435,141</coords2d><coords2d>409,145</coords2d><coords2d>389,154</coords2d><coords2d>364,175</coords2d><coords2d>365,190</coords2d><coords2d>387,202</coords2d><coords2d>408,209</coords2d><coords2d>434,199</coords2d><coords2d>445,178</coords2d><coords2d>451,156</coords2d><coords2d>453,142</coords2d></polygonregion><representativepoint><coords2d>422,161</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>271,532</coords2d></centroid><radius direction="x">121</radius></circleregion><representativepoint><coords2d>298,601</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+</markinglist>
+</imgannotooldata>

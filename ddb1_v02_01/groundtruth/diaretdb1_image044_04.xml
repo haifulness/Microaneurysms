@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool SYSTEM "http://www.it.lut.fi/project/imageret/imgannotool/downloads/imgannotool_dataformat_v_0_1.dtd">
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><polygonregion><centroid><coords2d>852,888</coords2d></centroid><coords2d>833,887</coords2d><coords2d>846,902</coords2d><coords2d>860,904</coords2d><coords2d>867,897</coords2d><coords2d>869,885</coords2d><coords2d>867,877</coords2d><coords2d>853,876</coords2d><coords2d>843,877</coords2d><coords2d>833,887</coords2d></polygonregion><representativepoint><coords2d>854,888</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>813,742</coords2d></centroid><coords2d>831,747</coords2d><coords2d>826,729</coords2d><coords2d>810,721</coords2d><coords2d>797,727</coords2d><coords2d>790,742</coords2d><coords2d>799,760</coords2d><coords2d>818,763</coords2d><coords2d>831,747</coords2d></polygonregion><representativepoint><coords2d>813,744</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>821,374</coords2d></centroid><coords2d>812,353</coords2d><coords2d>806,372</coords2d><coords2d>798,385</coords2d><coords2d>800,401</coords2d><coords2d>807,408</coords2d><coords2d>822,406</coords2d><coords2d>837,394</coords2d><coords2d>844,376</coords2d><coords2d>845,356</coords2d><coords2d>838,344</coords2d><coords2d>827,344</coords2d><coords2d>812,353</coords2d></polygonregion><representativepoint><coords2d>818,360</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>896,429</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>896,429</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>924,365</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>924,365</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>928,398</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>928,398</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>349,542</coords2d></centroid><radius direction="x">117</radius></circleregion><representativepoint><coords2d>390,560</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+</markinglist>
+</imgannotooldata>

@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool>
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>486,328</coords2d></centroid><radius direction="x">44</radius></circleregion><representativepoint><coords2d>483,326</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>884,524</coords2d></centroid><radius direction="x">64</radius></circleregion><representativepoint><coords2d>900,529</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>799,258</coords2d></centroid><radius direction="x">96</radius></circleregion><representativepoint><coords2d>800,241</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1120,409</coords2d></centroid><radius direction="x">25</radius></circleregion><representativepoint><coords2d>1120,410</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>785,399</coords2d></centroid><radius direction="x">36</radius></circleregion><representativepoint><coords2d>783,393</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>219,980</coords2d></centroid><radius direction="x">29</radius></circleregion><representativepoint><coords2d>220,983</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1111,819</coords2d></centroid><radius direction="x">45</radius></circleregion><representativepoint><coords2d>1111,824</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1193,730</coords2d></centroid><radius direction="x">33</radius></circleregion><representativepoint><coords2d>1195,732</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>905,639</coords2d></centroid><radius direction="x">91</radius></circleregion><representativepoint><coords2d>972,660</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1087,660</coords2d></centroid><radius direction="x">21</radius></circleregion><representativepoint><coords2d>1088,660</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+</markinglist>
+</imgannotooldata>

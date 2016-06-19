@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool SYSTEM "http://www.it.lut.fi/project/imageret/imgannotool/downloads/imgannotool_dataformat_v_0_1.dtd">
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><polygonregion><centroid><coords2d>562,650</coords2d></centroid><coords2d>571,624</coords2d><coords2d>548,625</coords2d><coords2d>533,631</coords2d><coords2d>530,647</coords2d><coords2d>532,667</coords2d><coords2d>545,678</coords2d><coords2d>575,683</coords2d><coords2d>591,676</coords2d><coords2d>592,656</coords2d><coords2d>590,637</coords2d><coords2d>571,624</coords2d></polygonregion><representativepoint><coords2d>559,645</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>304,639</coords2d></centroid><radius direction="x">108</radius></circleregion><representativepoint><coords2d>357,635</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><circleregion><centroid><coords2d>178,286</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>178,286</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>595,923</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>595,923</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>600,918</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>600,918</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+</markinglist>
+</imgannotooldata>

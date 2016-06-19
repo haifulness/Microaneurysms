@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool SYSTEM "http://www.it.lut.fi/project/imageret/imgannotool/downloads/imgannotool_dataformat_v_0_1.dtd">
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><ellipseregion><centroid><coords2d>1155,591</coords2d></centroid><radius direction="x">109</radius><radius direction="y">89</radius><angle>51</angle></ellipseregion><representativepoint><coords2d>1088,580</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>257,636</coords2d></centroid><radius direction="x">44</radius><radius direction="y">31</radius><angle>176</angle></ellipseregion><representativepoint><coords2d>257,629</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>553,785</coords2d></centroid><coords2d>561,761</coords2d><coords2d>502,784</coords2d><coords2d>510,825</coords2d><coords2d>533,828</coords2d><coords2d>594,794</coords2d><coords2d>591,764</coords2d><coords2d>568,764</coords2d><coords2d>561,761</coords2d></polygonregion><representativepoint><coords2d>525,807</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>618,619</coords2d></centroid><coords2d>601,603</coords2d><coords2d>586,629</coords2d><coords2d>596,647</coords2d><coords2d>663,644</coords2d><coords2d>673,611</coords2d><coords2d>604,598</coords2d><coords2d>601,603</coords2d></polygonregion><representativepoint><coords2d>604,629</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>350,708</coords2d></centroid><coords2d>374,664</coords2d><coords2d>311,685</coords2d><coords2d>285,756</coords2d><coords2d>318,764</coords2d><coords2d>377,759</coords2d><coords2d>387,713</coords2d><coords2d>372,662</coords2d><coords2d>374,664</coords2d></polygonregion><representativepoint><coords2d>364,690</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>810,36</coords2d></centroid><radius direction="x">29</radius><radius direction="y">21</radius><angle>131</angle></ellipseregion><representativepoint><coords2d>819,40</coords2d></representativepoint><confidencelevel>Low</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+</markinglist>
+</imgannotooldata>

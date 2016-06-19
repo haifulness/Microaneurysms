@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool SYSTEM "http://www.it.lut.fi/project/imageret/imgannotool/downloads/imgannotool_dataformat_v_0_1.dtd">
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>799,560</coords2d></centroid><radius direction="x">67</radius></circleregion><representativepoint><coords2d>784,580</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>709,745</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>709,745</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1052,672</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>1052,672</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1006,557</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>1006,557</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1126,433</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>1126,433</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1160,383</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>1160,383</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>885,256</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>885,256</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>877,461</coords2d></centroid><radius direction="x">39</radius></circleregion><representativepoint><coords2d>860,466</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1067,363</coords2d></centroid><radius direction="x">34</radius></circleregion><representativepoint><coords2d>1065,382</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>943,463</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>943,463</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1114,221</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>1114,221</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>819,234</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>819,234</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+</markinglist>
+</imgannotooldata>

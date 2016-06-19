@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool SYSTEM "http://www.it.lut.fi/project/imageret/imgannotool/downloads/imgannotool_dataformat_v_0_1.dtd">
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>709,799</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>709,799</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>835,77</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>835,77</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>837,101</coords2d></centroid><radius direction="x">21</radius></circleregion><representativepoint><coords2d>843,107</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>330,207</coords2d></centroid><radius direction="x">24</radius></circleregion><representativepoint><coords2d>331,211</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>334,246</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>334,246</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>417,410</coords2d></centroid><radius direction="x">20</radius></circleregion><representativepoint><coords2d>419,422</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>IRMA</markingtype></marking>
+</markinglist>
+</imgannotooldata>

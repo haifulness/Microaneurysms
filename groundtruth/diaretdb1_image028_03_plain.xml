@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool>
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><ellipseregion><centroid><coords2d>369,675</coords2d></centroid><radius direction="x">111</radius><radius direction="y">86</radius><angle>119</angle></ellipseregion><representativepoint><coords2d>377,738</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>720,898</coords2d></centroid><radius direction="x">155</radius><radius direction="y">107</radius><angle>122</angle></ellipseregion><representativepoint><coords2d>752,981</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>IRMA</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>778,571</coords2d></centroid><radius direction="x">229</radius><radius direction="y">87</radius><angle>176</angle></ellipseregion><representativepoint><coords2d>951,595</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>IRMA</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>817,436</coords2d></centroid><radius direction="x">81</radius><radius direction="y">52</radius><angle>19</angle></ellipseregion><representativepoint><coords2d>788,438</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Neovascularisation</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>743,157</coords2d></centroid><radius direction="x">69</radius><radius direction="y">48</radius><angle>88</angle></ellipseregion><representativepoint><coords2d>746,174</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>IRMA</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>586,148</coords2d></centroid><radius direction="x">87</radius><radius direction="y">54</radius><angle>126</angle></ellipseregion><representativepoint><coords2d>557,140</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>IRMA</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>1079,571</coords2d></centroid><radius direction="x">102</radius><radius direction="y">48</radius><angle>127</angle></ellipseregion><representativepoint><coords2d>1045,568</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Neovascularisation</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>1281,618</coords2d></centroid><radius direction="x">89</radius><radius direction="y">53</radius><angle>98</angle></ellipseregion><representativepoint><coords2d>1281,626</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Neovascularisation</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>989,665</coords2d></centroid><radius direction="x">77</radius><radius direction="y">50</radius><angle>149</angle></ellipseregion><representativepoint><coords2d>1010,668</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>IRMA</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>795,695</coords2d></centroid><radius direction="x">39</radius><radius direction="y">19</radius><angle>125</angle></ellipseregion><representativepoint><coords2d>795,706</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>IRMA</markingtype></marking>
+</markinglist>
+</imgannotooldata>

@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool SYSTEM "http://www.it.lut.fi/project/imageret/imgannotool/downloads/imgannotool_dataformat_v_0_1.dtd">
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>989,1009</coords2d></centroid><radius direction="x">34</radius></circleregion><representativepoint><coords2d>978,1002</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>868,773</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>868,773</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>894,662</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>894,662</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>904,968</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>904,968</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>970,781</coords2d></centroid><radius direction="x">28</radius></circleregion><representativepoint><coords2d>977,791</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>IRMA</markingtype></marking>
+<marking><circleregion><centroid><coords2d>336,629</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>336,629</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>402,816</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>402,816</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>797,396</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>797,396</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>742,409</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>742,409</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>746,398</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>746,398</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+</markinglist>
+</imgannotooldata>

@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool SYSTEM "http://www.it.lut.fi/project/imageret/imgannotool/downloads/imgannotool_dataformat_v_0_1.dtd">
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>734,562</coords2d></centroid><radius direction="x">12</radius></circleregion><representativepoint><coords2d>734,562</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>497,647</coords2d></centroid><radius direction="x">2</radius></circleregion><representativepoint><coords2d>502,649</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>981,351</coords2d></centroid><radius direction="x">18</radius></circleregion><representativepoint><coords2d>981,351</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1045,519</coords2d></centroid><radius direction="x">13</radius></circleregion><representativepoint><coords2d>1047,522</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>609,93</coords2d></centroid><radius direction="x">18</radius><radius direction="y">16</radius><angle>6</angle></ellipseregion><representativepoint><coords2d>604,91</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>705,640</coords2d></centroid><radius direction="x">41</radius><radius direction="y">26</radius><angle>172</angle></ellipseregion><representativepoint><coords2d>693,653</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><circleregion><centroid><coords2d>654,563</coords2d></centroid><radius direction="x">7</radius></circleregion><representativepoint><coords2d>654,564</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>789,584</coords2d></centroid><radius direction="x">46</radius><radius direction="y">29</radius><angle>131</angle></ellipseregion><representativepoint><coords2d>812,604</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>713,529</coords2d></centroid><radius direction="x">24</radius></circleregion><representativepoint><coords2d>706,534</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>865,599</coords2d></centroid><radius direction="x">10</radius></circleregion><representativepoint><coords2d>865,599</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>859,711</coords2d></centroid><radius direction="x">7</radius></circleregion><representativepoint><coords2d>859,711</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>976,713</coords2d></centroid><radius direction="x">6</radius></circleregion><representativepoint><coords2d>975,713</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>684,447</coords2d></centroid><radius direction="x">59</radius></circleregion><representativepoint><coords2d>651,477</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>769,502</coords2d></centroid><radius direction="x">43</radius></circleregion><representativepoint><coords2d>752,533</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1069,584</coords2d></centroid><radius direction="x">7</radius></circleregion><representativepoint><coords2d>1069,585</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1072,644</coords2d></centroid><radius direction="x">9</radius></circleregion><representativepoint><coords2d>1073,644</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1115,636</coords2d></centroid><radius direction="x">6</radius></circleregion><representativepoint><coords2d>1115,636</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1088,636</coords2d></centroid><radius direction="x">7</radius></circleregion><representativepoint><coords2d>1088,635</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1223,555</coords2d></centroid><radius direction="x">107</radius></circleregion><representativepoint><coords2d>1180,552</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+</markinglist>
+</imgannotooldata>

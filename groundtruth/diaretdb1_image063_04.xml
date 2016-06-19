@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool SYSTEM "http://www.it.lut.fi/project/imageret/imgannotool/downloads/imgannotool_dataformat_v_0_1.dtd">
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>310,530</coords2d></centroid><radius direction="x">107</radius></circleregion><representativepoint><coords2d>341,528</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><circleregion><centroid><coords2d>481,126</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>481,126</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>829,552</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>829,552</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>847,1053</coords2d></centroid><coords2d>821,1040</coords2d><coords2d>837,1035</coords2d><coords2d>858,1039</coords2d><coords2d>873,1048</coords2d><coords2d>878,1062</coords2d><coords2d>875,1073</coords2d><coords2d>851,1073</coords2d><coords2d>837,1068</coords2d><coords2d>820,1052</coords2d><coords2d>821,1040</coords2d></polygonregion><representativepoint><coords2d>850,1056</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+</markinglist>
+</imgannotooldata>

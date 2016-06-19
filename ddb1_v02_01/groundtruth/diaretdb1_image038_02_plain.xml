@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool>
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>201,542</coords2d></centroid><radius direction="x">117</radius></circleregion><representativepoint><coords2d>232,619</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>897,779</coords2d></centroid><radius direction="x">149</radius><radius direction="y">66</radius><angle>141</angle></ellipseregion><representativepoint><coords2d>844,728</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>667,560</coords2d></centroid><radius direction="x">178</radius><radius direction="y">87</radius><angle>175</angle></ellipseregion><representativepoint><coords2d>609,622</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>662,291</coords2d></centroid><radius direction="x">63</radius><radius direction="y">50</radius><angle>132</angle></ellipseregion><representativepoint><coords2d>700,289</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>IRMA</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>800,474</coords2d></centroid><radius direction="x">211</radius><radius direction="y">120</radius><angle>122</angle></ellipseregion><representativepoint><coords2d>795,468</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>IRMA</markingtype></marking>
+<marking><circleregion><centroid><coords2d>201,955</coords2d></centroid><radius direction="x">35</radius></circleregion><representativepoint><coords2d>201,956</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+</markinglist>
+</imgannotooldata>

@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool SYSTEM "http://www.it.lut.fi/project/imageret/imgannotool/downloads/imgannotool_dataformat_v_0_1.dtd">
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>1232,635</coords2d></centroid><radius direction="x">136</radius></circleregion><representativepoint><coords2d>1198,634</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>749,266</coords2d></centroid><coords2d>725,254</coords2d><coords2d>737,247</coords2d><coords2d>752,248</coords2d><coords2d>764,241</coords2d><coords2d>778,246</coords2d><coords2d>766,267</coords2d><coords2d>773,283</coords2d><coords2d>758,304</coords2d><coords2d>736,304</coords2d><coords2d>724,278</coords2d><coords2d>725,254</coords2d></polygonregion><representativepoint><coords2d>735,262</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>270,217</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>270,217</coords2d></representativepoint><confidencelevel>Low</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+</markinglist>
+</imgannotooldata>

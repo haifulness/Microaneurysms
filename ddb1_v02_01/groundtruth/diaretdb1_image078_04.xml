@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool SYSTEM "http://www.it.lut.fi/project/imageret/imgannotool/downloads/imgannotool_dataformat_v_0_1.dtd">
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>1002,600</coords2d></centroid><radius direction="x">112</radius></circleregion><representativepoint><coords2d>950,609</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><circleregion><centroid><coords2d>657,144</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>657,144</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><circleregion><centroid><coords2d>1237,540</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>1237,540</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Red_small_dots</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>421,710</coords2d></centroid><coords2d>421,701</coords2d><coords2d>411,705</coords2d><coords2d>411,715</coords2d><coords2d>416,721</coords2d><coords2d>427,721</coords2d><coords2d>430,710</coords2d><coords2d>429,704</coords2d><coords2d>421,701</coords2d></polygonregion><representativepoint><coords2d>420,709</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>519,618</coords2d></centroid><radius direction="x">5</radius></circleregion><representativepoint><coords2d>519,618</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+</markinglist>
+</imgannotooldata>

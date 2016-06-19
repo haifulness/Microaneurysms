@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool>
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><circleregion><centroid><coords2d>945,625</coords2d></centroid><radius direction="x">110</radius></circleregion><representativepoint><coords2d>911,623</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><polygonregion><centroid><coords2d>622,708</coords2d></centroid><coords2d>604,713</coords2d><coords2d>613,727</coords2d><coords2d>630,733</coords2d><coords2d>642,727</coords2d><coords2d>646,705</coords2d><coords2d>638,686</coords2d><coords2d>615,681</coords2d><coords2d>602,688</coords2d><coords2d>604,713</coords2d></polygonregion><representativepoint><coords2d>627,709</coords2d></representativepoint><confidencelevel>Low</confidencelevel><markingtype>Soft_exudates</markingtype></marking>
+</markinglist>
+</imgannotooldata>

@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE imgannotool>
+<imgannotooldata>
+<header>
+<creator>Iiris</creator>
+<software version="0.2">MVPR/Image Annotation Tool http://www.it.lut.fi/project/imageret/imgannotool/</software>
+<affiliation>ImageRet Project, Machine Vision and Pattern Recognition Research Group, Lappeenranta University of Technology, P.O.Box 20, 53851 Lappeenranta, Finland</affiliation>
+<copyrightnotice>Restricted academic license, see http://www.it.lut.fi/project/imageret/</copyrightnotice>
+</header>
+<markinglist>
+<marking><ellipseregion><centroid><coords2d>1002,588</coords2d></centroid><radius direction="x">99</radius><radius direction="y">81</radius><angle>72</angle></ellipseregion><representativepoint><coords2d>953,611</coords2d></representativepoint><confidencelevel>High</confidencelevel><markingtype>Disc</markingtype></marking>
+<marking><circleregion><centroid><coords2d>420,709</coords2d></centroid><radius direction="x">8</radius></circleregion><representativepoint><coords2d>422,710</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>520,594</coords2d></centroid><radius direction="x">10</radius></circleregion><representativepoint><coords2d>521,594</coords2d></representativepoint><confidencelevel>Medium</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>366,779</coords2d></centroid><radius direction="x">24</radius></circleregion><representativepoint><coords2d>363,787</coords2d></representativepoint><confidencelevel>Low</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>421,801</coords2d></centroid><radius direction="x">10</radius></circleregion><representativepoint><coords2d>422,801</coords2d></representativepoint><confidencelevel>Low</confidencelevel><markingtype>Hard_exudates</markingtype></marking>
+<marking><circleregion><centroid><coords2d>656,144</coords2d></centroid><radius direction="x">10</radius></circleregion><representativepoint><coords2d>656,143</coords2d></representativepoint><confidencelevel>Low</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+<marking><ellipseregion><centroid><coords2d>848,254</coords2d></centroid><radius direction="x">16</radius><radius direction="y">8</radius><angle>140</angle></ellipseregion><representativepoint><coords2d>846,254</coords2d></representativepoint><confidencelevel>Low</confidencelevel><markingtype>Haemorrhages</markingtype></marking>
+</markinglist>
+</imgannotooldata>
