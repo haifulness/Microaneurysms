@@ -25,6 +25,7 @@ IMG_HEIGHT = 1152
 NUM_PATCHES_PER_IMG = 60
 PATCH_SIZE = 10
 
+NUM_IMG_TEST = 25
 
 ################################################################################
 #
@@ -218,18 +219,22 @@ worksheet.write(0, 5, "Freq of Max Intensity")
 worksheet.write(0, 6, "Avg of Intensity")
 worksheet.write(0, 7, "L1-norm")
 worksheet.write(0, 8, "L2-norm")
+worksheet.write(0, 9, "Standard Deviation")
+worksheet.write(0, 10, "Mean Absolute Deviation")
 
-worksheet.write(0, 10, "Image no.")
-worksheet.write(0, 11, "Positive?")
-worksheet.write(0, 12, "Coord-x")
-worksheet.write(0, 13, "Coord-y")
-worksheet.write(0, 14, "Max. Intensity")
-worksheet.write(0, 15, "Freq of Max Intensity")
-worksheet.write(0, 16, "Avg of Intensity")
-worksheet.write(0, 17, "L1-norm")
-worksheet.write(0, 18, "L2-norm")
+worksheet.write(0, 11, "Image no.")
+worksheet.write(0, 12, "Positive?")
+worksheet.write(0, 13, "Coord-x")
+worksheet.write(0, 14, "Coord-y")
+worksheet.write(0, 15, "Max. Intensity")
+worksheet.write(0, 16, "Freq of Max Intensity")
+worksheet.write(0, 17, "Avg of Intensity")
+worksheet.write(0, 18, "L1-norm")
+worksheet.write(0, 19, "L2-norm")
+worksheet.write(0, 20, "Standard Deviation")
+worksheet.write(0, 21, "Mean Absolute Deviation")
 
-for i in range(0, 10):
+for i in range(0, NUM_IMG_TEST):
 	print("Loading data for image #", (i+1), '... ', end="")
 	patches[i] = []
 	coord_list, label_list = generatePatches(i+1, PATCH_SIZE)
@@ -258,18 +263,20 @@ for i in range(0, 10):
 			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 7, LA.norm(a, 1))
 			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 8, LA.norm(a, 2))
 			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 9, numpy.std(a))
+			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 10, numpy.mean(numpy.absolute(a - numpy.mean(a))))
 
 		else:
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 10, i+1)
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 11, label_list[j])
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 12, coord_list[j][0])
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 13, coord_list[j][1])
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 14, maxima)
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 15, img_flattened.count(maxima))
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 16, sum(img_flattened)/len(img_flattened))
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 17, LA.norm(a, 1))
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 18, LA.norm(a, 2))
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 19, numpy.std(a))
+			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 11, i+1)
+			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 12, label_list[j])
+			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 13, coord_list[j][0])
+			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 14, coord_list[j][1])
+			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 15, maxima)
+			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 16, img_flattened.count(maxima))
+			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 17, sum(img_flattened)/len(img_flattened))
+			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 18, LA.norm(a, 1))
+			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 19, LA.norm(a, 2))
+			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 20, numpy.std(a))
+			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 21, numpy.mean(numpy.absolute(a - numpy.mean(a))))
 
 	print("done")
 
@@ -293,7 +300,7 @@ chart1.set_x_axis({
 })
 chart1.set_y_axis({
 	"name": "L1-norm",
-	#"max": 15000
+	"max": 15000
 })
 # Add a series to the chart.
 chart1.add_series({
@@ -325,7 +332,7 @@ chart2.set_x_axis({
 })
 chart2.set_y_axis({
 	"name": "L2-norm",
-	#"max": 1500
+	"max": 1500
 })
 # Add a series to the chart.
 chart2.add_series({
@@ -339,7 +346,7 @@ chart2.add_series({
 	"values": ["Sheet1", 1, 18, 10*NUM_PATCHES_PER_IMG/4+1, 18]
 })
 # Insert the chart into the worksheet.
-worksheet.insert_chart("C2", chart2)
+worksheet.insert_chart("D2", chart2)
 
 
 # Chart 3: Freq of Maximal Intensity vs. Standard Deviation
@@ -353,11 +360,11 @@ chart3.set_x_axis({
 	"name": "Frequency of Maximal Intensity",
 	"min": 0, 
 	"max": 10,
-	"major_unit": 2
+	#"major_unit": 2
 })
 chart3.set_y_axis({
 	"name": "Standard Deviation",
-	#"max": 1500
+	"max": 10
 })
 # Add a series to the chart.
 chart3.add_series({
@@ -371,7 +378,40 @@ chart3.add_series({
 	"values": ["Sheet1", 1, 19, 10*NUM_PATCHES_PER_IMG/4+1, 19]
 })
 # Insert the chart into the worksheet.
-worksheet.insert_chart("C3", chart3)
+worksheet.insert_chart("E3", chart3)
+
+
+# Chart 4: Standard Deviation vs. Mean Absolute Deviation
+chart4 = workbook.add_chart({
+	"type": "scatter"
+})
+chart4.set_title({
+    "name": "Standard Deviation vs. Mean Absolute Deviation"
+})
+chart4.set_x_axis({
+	"name": "Standard Deviation",
+	"min": 0, 
+	"max": 10,
+	#"major_unit": 2
+})
+chart4.set_y_axis({
+	"name": "Mean Absolute Deviation",
+	"max": 10
+})
+# Add a series to the chart.
+chart4.add_series({
+	"name": "Non-MA",
+	"categories": ["Sheet1", 1, 9, 10*NUM_PATCHES_PER_IMG*3/4+1, 9],
+	"values": ["Sheet1", 1, 10, 10*NUM_PATCHES_PER_IMG*3/4+1, 10]
+})
+chart4.add_series({
+	"name": "MA",
+	"categories": ["Sheet1", 1, 20, 10*NUM_PATCHES_PER_IMG/4+1, 20],
+	"values": ["Sheet1", 1, 21, 10*NUM_PATCHES_PER_IMG/4+1, 21]
+})
+# Insert the chart into the worksheet.
+worksheet.insert_chart("F4", chart4)
+
 
 print("done")
 workbook.close()
