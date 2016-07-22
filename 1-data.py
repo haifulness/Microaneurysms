@@ -22,7 +22,7 @@ DATAPATH = "ddb1_v02_01/"
 NUM_IMG = 89
 IMG_WIDTH = 1500
 IMG_HEIGHT = 1152
-NUM_PATCHES_PER_IMG = 60
+NUM_PATCHES_PER_IMG = 200
 PATCH_SIZE = 10
 
 NUM_IMG_TEST = 25
@@ -86,6 +86,7 @@ def loadXML(img_num):
 					point_list[len(point_list)-1].append(point[0])
 					point_list[len(point_list)-1].append(point[1])
 
+	#print(len(point_list))
 	return point_list
 
 
@@ -117,6 +118,7 @@ def loadAllRepPoints():
 		coord_list[i] = loadXML(i+1)
 
 	sys.stdout.write(" done\n")
+
 	return coord_list
 
 
@@ -131,33 +133,40 @@ def generatePatches(img_num, patch_size):
 	coord_list = []
 	label_list = []
 
-	# Number of positive and negative samples.
-	# We expect to have three times more of negative samples than positive ones.
-	count_pos = 0
-	count_neg = 0
+	# If the number of representative points are too small, it takes forever
+	# to random positive samples. Therefore, I set a lower bar here. In 
+	# particular, image #46 has only one representative point.
+	if len(point_list) > 4:
 
-	while len(coord_list) < NUM_PATCHES_PER_IMG:
-		coord_x = random.randint(0, IMG_HEIGHT - patch_size)
-		coord_y = random.randint(0, IMG_WIDTH - patch_size)
+		# Number of positive and negative samples.
+		# We expect to have three times more of negative samples than positive ones.
+		count_pos = 0
+		count_neg = 0
 
-		isPositive = isPositiveSample(coord_x, coord_y, patch_size, 
-			point_list)
+		while len(coord_list) < NUM_PATCHES_PER_IMG:
+			coord_x = random.randint(0, IMG_HEIGHT - patch_size)
+			coord_y = random.randint(0, IMG_WIDTH - patch_size)
 
-		# Positive sample
-		if isPositive and (count_pos < NUM_PATCHES_PER_IMG / 4):
-			coord_list.append([])
-			coord_list[len(coord_list)-1].append(coord_x)
-			coord_list[len(coord_list)-1].append(coord_y)
-			label_list.append(1)
-			count_pos += 1
+			isPositive = isPositiveSample(coord_x, coord_y, patch_size, 
+				point_list)
 
-		# Negative sample
-		elif (not isPositive) and (count_neg < NUM_PATCHES_PER_IMG * 3/4):
-			coord_list.append([])
-			coord_list[len(coord_list)-1].append(coord_x)
-			coord_list[len(coord_list)-1].append(coord_y)
-			label_list.append(0)
-			count_neg += 1
+			# Positive sample
+			if isPositive and (count_pos < NUM_PATCHES_PER_IMG / 4):
+				coord_list.append([])
+				coord_list[len(coord_list)-1].append(coord_x)
+				coord_list[len(coord_list)-1].append(coord_y)
+				label_list.append(1)
+				count_pos += 1
+
+			# Negative sample
+			elif (not isPositive) and (count_neg < NUM_PATCHES_PER_IMG * 3/4):
+				coord_list.append([])
+				coord_list[len(coord_list)-1].append(coord_x)
+				coord_list[len(coord_list)-1].append(coord_y)
+				label_list.append(0)
+				count_neg += 1
+
+			#print(count_pos, count_neg)
 
 	return coord_list, label_list
 
@@ -207,7 +216,7 @@ def patchFlatten(patch, patch_size):
 #
 patches = {}
 
-workbook = xlsxwriter.Workbook('results.xlsx')
+workbook = xlsxwriter.Workbook('result1.xlsx')
 worksheet = workbook.add_worksheet()
 
 worksheet.write(0, 0, "Image no.")
@@ -234,54 +243,53 @@ worksheet.write(0, 19, "L2-norm")
 worksheet.write(0, 20, "Standard Deviation")
 worksheet.write(0, 21, "Mean Absolute Deviation")
 
-for i in range(0, NUM_IMG_TEST):
+for i in range(0, NUM_IMG):
 	print("Loading data for image #", (i+1), '... ', end="")
 	patches[i] = []
 	coord_list, label_list = generatePatches(i+1, PATCH_SIZE)
 
-	for j in range(0, len(coord_list)):
-		img = loadPatch(i+1, coord_list[j][0], coord_list[j][1], PATCH_SIZE)
-		img_flattened = patchFlatten(img, PATCH_SIZE)
+	if len(coord_list) == NUM_PATCHES_PER_IMG:
+		for j in range(0, len(coord_list)):
+			img = loadPatch(i+1, coord_list[j][0], coord_list[j][1], PATCH_SIZE)
+			img_flattened = patchFlatten(img, PATCH_SIZE)
 
-		# Show histogram
-		#plt.hist(img.ravel(),256,[0,256]); plt.show()
+			# Calculate maxima to get the maximal frequency
+			maxima = max(img_flattened)
 
-		# Calculate maxima to get the maximal frequency
-		maxima = max(img_flattened)
+			# Flatten the patch so we can apply L1- and L2-norms
+			a = numpy.asarray(img_flattened)
 
-		# Flatten the patch so we can apply L1- and L2-norms
-		a = numpy.asarray(img_flattened)
+			if label_list[j] == 0:
+				worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 0, i+1)
+				worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 1, label_list[j])
+				worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 2, coord_list[j][0])
+				worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 3, coord_list[j][1])
+				worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 4, maxima)
+				worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 5, img_flattened.count(maxima))
+				worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 6, sum(img_flattened)/len(img_flattened))
+				worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 7, LA.norm(a, 1))
+				worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 8, LA.norm(a, 2))
+				worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 9, numpy.std(a))
+				worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 10, numpy.mean(numpy.absolute(a - numpy.mean(a))))
 
-		if label_list[j] == 0:
-			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 0, i+1)
-			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 1, label_list[j])
-			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 2, coord_list[j][0])
-			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 3, coord_list[j][1])
-			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 4, maxima)
-			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 5, img_flattened.count(maxima))
-			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 6, sum(img_flattened)/len(img_flattened))
-			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 7, LA.norm(a, 1))
-			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 8, LA.norm(a, 2))
-			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 9, numpy.std(a))
-			worksheet.write(i*NUM_PATCHES_PER_IMG*3/4 + j + 1, 10, numpy.mean(numpy.absolute(a - numpy.mean(a))))
-
-		else:
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 11, i+1)
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 12, label_list[j])
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 13, coord_list[j][0])
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 14, coord_list[j][1])
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 15, maxima)
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 16, img_flattened.count(maxima))
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 17, sum(img_flattened)/len(img_flattened))
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 18, LA.norm(a, 1))
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 19, LA.norm(a, 2))
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 20, numpy.std(a))
-			worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 21, numpy.mean(numpy.absolute(a - numpy.mean(a))))
+			else:
+				worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 11, i+1)
+				worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 12, label_list[j])
+				worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 13, coord_list[j][0])
+				worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 14, coord_list[j][1])
+				worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 15, maxima)
+				worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 16, img_flattened.count(maxima))
+				worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 17, sum(img_flattened)/len(img_flattened))
+				worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 18, LA.norm(a, 1))
+				worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 19, LA.norm(a, 2))
+				worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 20, numpy.std(a))
+				worksheet.write(i*NUM_PATCHES_PER_IMG/4 + j + 1 - NUM_PATCHES_PER_IMG*3/4, 21, numpy.mean(numpy.absolute(a - numpy.mean(a))))
 
 	print("done")
 
 
 # Create new chart objects.
+'''
 print("Generating chart... ", end="")
 
 
@@ -411,7 +419,6 @@ chart4.add_series({
 })
 # Insert the chart into the worksheet.
 worksheet.insert_chart("F4", chart4)
+'''
 
-
-print("done")
 workbook.close()

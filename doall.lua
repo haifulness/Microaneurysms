@@ -4,86 +4,140 @@
 -- File: doall.lua
 --]]
 
-require "unsup"
-require "image"
 require "optim"
 require "nn"
 require "gnuplot"
-require "LuaXML"
---require ("util.lua")
+
 
 -------------------------------------------------------------------------------
 -- Constants.
 --
--- Number of images and their original sizes.
-NUM_IMG = 89
-ORIGIN_IMG_W = 1500
-ORIGIN_IMG_H = 1152
+INPUT_SIZE = 7
+DATASET_SIZE = 10585
 
--- Number of positive lesions. 
--- WARNING: the paper says this value is 2182.
-NUM_LESIONS_POS = 2057
+-- k-fold cross-validation
+NUM_FOLDS = 10
 
--- Number of negative lesions. The value is get from the paper. 
--- We can modify it later.
-NUM_LESIONS_NEG = 6230
-
--- Total
-DATASET_SIZE = NUM_LESIONS_POS + NUM_LESIONS_NEG
-
--- We can modify this value.
-IMG_PATCH_SIZE = 25
-
--- To get a square around with a given point as its center,
--- we need to locate the top left and the bottom right
--- vertices of the square. The below two values are for 
--- that purpose.
-IMG_PATCH_HALF_NEG = -math.floor(IMG_PATCH_SIZE / 2)
-IMG_PATCH_HALF_POS = math.ceil(IMG_PATCH_SIZE / 2)
-
--- Number of nodes in hidden layers of the autoencoder.
-HIDDEN_FIRST = 225
-HIDDEN_SECOND = 100
+-- Size of each subset
+SUB_SIZE = math.floor(DATASET_SIZE / NUM_FOLDS)
 
 
 -------------------------------------------------------------------------------
 -- Configuration
 params = {
 	seed = 1,  -- initial random seed
-	threads = 2,  -- number of threads
+	threads = 1,  -- number of threads
 	beta = 1e1,  -- prediction error coefficient
 	batch_size = 1,  -- batch size
-	max_epoch = 5e1,  -- max number of updates
-	max_epoch1 = 1e4,  -- for the first autoencoder
-	max_epoch2 = 1e4,  -- for the second autoencoder
-	num_folds = 10  -- 10-fold cross-validation
+	max_epoch = 1e3,  -- max number of updates
 }
 
-optimState = {
-	learningRate = 1e-3,
-	momentum = 1e-2,
-	weightDecay = 3e-3,
-	learningRateDecay = 1e-7
+config = {
+	learningRate = 1e-4
+	--, momentum = 1e-3
+	--, weightDecay = 1e-3
+	, learningRateDecay = 1e-7
 }
 
 torch.manualSeed(os.clock())
-torch.setnumthreads(params.threads)
+--torch.setnumthreads(params.threads)
 
 
 -------------------------------------------------------------------------------
 -- Run
 --
--- Load data
--- Assumptions/Requirements:
--- + Two folders "images" and "groundtruth" are placed
---   add the same directory with this file.
--- + Images are stored in "images".
--- + XML files are stored in "groundtruth".
+-- Load files
 dofile "1-data.lua"
---data, label = loadRawData()
+dofile "2-model.lua"
+dofile "3-train.lua"
 
--- Create model
---dofile "2-model.lua"
+print("==> Run")
 
--- Train model
---dofile "3-train.lua"
+-- Load data
+local data, target = load_data("result.txt")
+
+-- Build models and train
+for num_hidden_layers = 10, 10 do
+	for num_hidden_nodes = 20, 20 do
+
+		local log, logErr = io.open("log.txt", "a+")
+		if logErr then 
+			print("File open error")
+			break
+		end
+
+		local timer = torch.Timer()
+
+		-- Prepare data
+		local indices = torch.randperm(DATASET_SIZE)
+		local idx = {}
+
+		-- Assign indices into subsets
+		for i = 1, NUM_FOLDS do
+			idx[i] = {}
+			for j = 1, SUB_SIZE do
+				idx[i][j] = indices[(i-1) * SUB_SIZE + j]
+			end
+		end
+
+		-- The last subset receives the remains
+		for j = 1, DATASET_SIZE % NUM_FOLDS do
+			idx[NUM_FOLDS][SUB_SIZE + j] = indices[DATASET_SIZE - j + 1]
+		end
+
+		local train_err = {}
+		local tp, tn, fp, fn = {}, {}, {}, {}
+
+		for fold = 1, NUM_FOLDS do
+			-- Build model
+			local model, criterion = 
+				buildModel(INPUT_SIZE, num_hidden_nodes, 1, num_hidden_layers, "sigmoid")
+			-- Create train & test datasets
+			local train_input = torch.Tensor(DATASET_SIZE - #idx[fold], INPUT_SIZE)
+			local train_output = torch.Tensor(DATASET_SIZE - #idx[fold])
+			local test_input = torch.Tensor(#idx[fold], INPUT_SIZE)
+			local test_output = torch.Tensor(#idx[fold])
+
+			-- Pull data into the train and test sets
+			for i = 1, 10 do
+				local train_counter = 1
+
+				if i == fold then
+					for j = 1, #idx[i] do
+						test_input[j] = torch.Tensor(data[idx[i][j]])
+						test_output[j] = target[idx[i][j]]
+					end
+				else
+					for j = 1, #idx[i] do
+						for k = 1, INPUT_SIZE do
+							train_input[train_counter][k] = data[idx[i][j]][k]
+						end
+						train_output[train_counter] = target[idx[i][j]]
+						train_counter = train_counter + 1
+					end
+				end
+			end
+
+			for epoch = 1, params.max_epoch do
+				train_err[fold] = train(model, criterion, train_input, train_output)
+			end
+
+			tp[fold], tn[fold], fp[fold], fn[fold] = test(model, test_input, test_output)	
+			
+			print(fold, train_err[fold], tp[fold], tn[fold], fp[fold], fn[fold])
+		end
+
+		log:write("\n-------------------------------------------\n")
+		log:write("\nNum of hidden layers: ", num_hidden_layers)
+		log:write("\nNum of hidden nodes: ", num_hidden_nodes)
+
+		for i = 1, NUM_FOLDS do
+			log:write(tp[fold], tn[fold], fp[fold], fn[fold], train_err[fold])
+		end
+
+		log:write("\nTime: ", timer:time().real)
+		log:close()
+
+		print("Total time: " .. timer:time().real .. " seconds\n")
+	end
+end
