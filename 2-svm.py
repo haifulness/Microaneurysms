@@ -26,6 +26,8 @@ def open_xlsx(path):
 
 	# Start scanning the worksheet to read data
 	for index in range(0, sample_neg):
+		print(index)
+		
 		label.append(float(sheet.cell(index + 1, 1).value))
 
 		data.append([])
@@ -69,7 +71,7 @@ def open_xlsx(path):
 ################################################################################
 # Main
 #
-data, label = open_xlsx("result.xlsx")
+data, label = open_xlsx("result_HE.xlsx")
 #print(len(data), len(data[0]))
 
 #indices = random.
@@ -91,7 +93,7 @@ for i in range(0, len(prediction)):
 	print(prediction[i], test_label[i])
 '''
 
-file_w = open("result.txt", "w")
+file_w = open("result_HE.txt", "w")
 
 for i in range(0, len(label)):
 	file_w.write(str(data[i][0]))

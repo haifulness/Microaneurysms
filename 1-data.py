@@ -212,11 +212,36 @@ def patchFlatten(patch, patch_size):
 
 ################################################################################
 #
+# Histogram Equalization
+#
+def histogramEqualization(patch):
+	img_equalized = patch
+	counter = [0] * 256
+	sum_counter = [0] * 256
+
+	# Count color frequency
+	for value in range(0, 255):
+		counter[value] = patch.count(value)
+
+	# Normalized sum
+	for value in range(1, 255):
+		sum_counter[value] = sum(counter[:value])
+
+	# Transform
+	coeff = (float)(max(patch)) / (float)(len(patch))
+	for i in range(0, len(patch)):
+		img_equalized[i] = int(round((float)(sum_counter[patch[i]]) * coeff))
+
+	return img_equalized
+
+
+################################################################################
+#
 # Test
 #
 patches = {}
 
-workbook = xlsxwriter.Workbook('result1.xlsx')
+workbook = xlsxwriter.Workbook('result_HE.xlsx')
 worksheet = workbook.add_worksheet()
 
 worksheet.write(0, 0, "Image no.")
@@ -252,11 +277,12 @@ for i in range(0, NUM_IMG):
 		for j in range(0, len(coord_list)):
 			img = loadPatch(i+1, coord_list[j][0], coord_list[j][1], PATCH_SIZE)
 			img_flattened = patchFlatten(img, PATCH_SIZE)
+			img_flattened = histogramEqualization(img_flattened)
 
 			# Calculate maxima to get the maximal frequency
 			maxima = max(img_flattened)
 
-			# Flatten the patch so we can apply L1- and L2-norms
+			# Convert to numpy so we can apply L1- and L2-norms
 			a = numpy.asarray(img_flattened)
 
 			if label_list[j] == 0:
@@ -289,7 +315,6 @@ for i in range(0, NUM_IMG):
 
 
 # Create new chart objects.
-'''
 print("Generating chart... ", end="")
 
 
@@ -419,6 +444,5 @@ chart4.add_series({
 })
 # Insert the chart into the worksheet.
 worksheet.insert_chart("F4", chart4)
-'''
 
 workbook.close()

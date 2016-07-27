@@ -29,13 +29,13 @@ params = {
 	threads = 1,  -- number of threads
 	beta = 1e1,  -- prediction error coefficient
 	batch_size = 1,  -- batch size
-	max_epoch = 1e5,  -- max number of updates
+	max_epoch = 1e0,  -- max number of updates
 }
 
 config = {
 	learningRate = 1e-3
 	, momentum = 1e-3
-	--, weightDecay = 1e-3
+	, weightDecay = 1e-3
 	, learningRateDecay = 1e-6
 }
 
@@ -54,12 +54,12 @@ dofile "3-train.lua"
 print("==> Run")
 
 -- Load data
-local data, target = load_data("result.txt")
+local data, target = load_data("result_HE.txt")
 
 -- Build models and train
-for num_hidden_layers = 5, 20 do
-	for num_hidden_nodes = 10, 100, 10 do
-		for turn = 1, 5 do
+for num_hidden_layers = 10, 10 do
+	for num_hidden_nodes = 100, 100 do
+		for turn = 1, 1 do
 			local log, logErr = io.open("log.txt", "a+")
 			if logErr then 
 				print("File open error")
@@ -92,9 +92,9 @@ for num_hidden_layers = 5, 20 do
 			local train_err = {}
 			local tp, tn, fp, fn = {}, {}, {}, {}
 
-			for fold = 1, 1 do
+			for fold = 1, NUM_FOLDS do
 				-- Build model
-				local model, criterion = 
+				model, criterion = 
 					buildModel(INPUT_SIZE, num_hidden_nodes, 1, num_hidden_layers, "sigmoid")
 				-- Create train & test datasets
 				local train_input = torch.Tensor(DATASET_SIZE - #idx[fold], INPUT_SIZE)
@@ -123,7 +123,7 @@ for num_hidden_layers = 5, 20 do
 				end
 
 				for epoch = 1, params.max_epoch do
-					train_err[fold] = train(model, criterion, train_input, train_output)
+					train_err[fold] = train(train_input, train_output)
 				end
 
 				tp[fold], tn[fold], fp[fold], fn[fold] = test(model, test_input, test_output)	
